@@ -1,0 +1,22 @@
+{{ define "main" }}
+<!-- <ul> -->
+<!--   {{ range $d := .Site.Taxonomies.categories }} -->
+<!--     <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li> -->
+<!--   {{ end }} -->
+<!-- </ul> -->
+
+<ul>
+    {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+    <!-- key is the name of the category -->
+    <h2>{{ $key }}</h2>
+    <ul>
+        {{ range $taxonomy.Pages }}
+        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+    <br>
+    {{ end }}
+</ul>
+
+{{ end }}
+

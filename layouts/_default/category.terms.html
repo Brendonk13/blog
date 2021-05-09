@@ -8,10 +8,11 @@
 <ul>
     {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
     <!-- key is the name of the category -->
-    <h2>{{ $key }}</h2>
+    <h2><u>{{ $key }}</u></h2>
     <ul>
         {{ range $taxonomy.Pages }}
-        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+        <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .Date.Format "2006 January" }} {{ .Date.Format "2" }}{{ if in (slice 1 21 31) .Date.Day}}st{{ else if in (slice 2 22) .Date.Day}}nd{{ else if in (slice 3 23) .Date.Day}}<sup>rd</sup>{{ else }}<sup>th</sup>{{ end }}
+            &nbsp &nbsp<strong> {{ .LinkTitle }}</strong></a></li>
         {{ end }}
     </ul>
     <br>

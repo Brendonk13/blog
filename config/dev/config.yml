@@ -3,8 +3,10 @@
 # title = "My New Hugo Site"
 # theme = "PaperMod"
 
+# baseURL: "http://rm-fr.ca/"
+languageCode: "en-us"
 baseURL: "https://localhost/"
-title: ExampleSite
+title: Fun Blog
 paginate: 5
 theme: PaperMod
 
@@ -109,7 +111,7 @@ params:
         relative: false # To use relative path for cover image, used in hugo Page-bundles
 
     editPost:
-        URL: "https://github.com/<path_to_repo>/content"
+        URL: "https://github.com/Brendonk13/blog/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 

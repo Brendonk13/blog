@@ -5,7 +5,7 @@
 
 # baseURL: "http://rm-fr.ca/"
 languageCode: "en-us"
-baseURL: "https://localhost/"
+baseURL: "http://localhost/"
 title: Fun Blog
 paginate: 5
 theme: PaperMod

@@ -9,7 +9,7 @@ tags:
 - networks
 series:
 - idk
-draft: true
+draft: false
 ---
 {{< series "idk" >}}
 

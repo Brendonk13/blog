@@ -11,7 +11,7 @@ series:
 - idk
 draft: false
 ---
-{{< series "idk" >}}
+[//]: # ( {{< series "idk" >}} )
 
 # Setup
 

@@ -1,5 +1,5 @@
 ---
-title: "Wireguard vpn"
+title: "Wireguard vpn setup guide"
 date: 2021-05-05T16:56:58-05:00
 categories:
 - homelab
@@ -13,7 +13,28 @@ draft: false
 ---
 [//]: # ( {{< series "idk" >}} )
 
-# Setup
+# Background Info
+
+## VPN's in my words
+
+The purpose of a VPN server at its heart is to give remote clients a private ip address on some private IP subnet that they cannot access. \
+Basically the VPN server can access some subnetworks that you can't access but want to access. \
+To do this the VPN gives you an IP address on your desired subnet which effectively makes you a client on that network with access to most or all (depending on firewall/ACL rules of the default gateway for the subnet) machines on that network. \
+This is accomplished by your local machine sending all traffic destined for the previously inaccessible subnet through the VPN server, which in turn forwards your requests to the appropriate client on the desired subnet!
+
+
+[//]: # ( # Purpose )
+
+[//]: # ( This article explains how use wireguard to setup a traditional VPN server where the client wants to be a client on some remote network that is accessible through the VPN server. )
+[//]: # ( In other words, the server has access to a subnetwork that the client would like to be apart of. )
+[//]: # ( For example: )
+[//]: # ( It is 2021 and you are working remotely, for dev purposes, you need to ssh into a machine located in your employers office but your employer doesn't have ssh ports )
+
+## Why wireguard?
+Number 1 reason is hands down for street cred, people will fear and respect you for using wireguard as long as you constantly announce that you use it (emphasis on constantly).
+Besides possibly leading to your crush finally acknowledging your existence, wireguard is just amazing: fast to setup, to manage and to ping.
+
+# Setup steps
 
 ## Create keys
 Run the following commands for every peer
@@ -32,7 +53,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 **(untested) Note:** To make the change permanent, add `net.ipv4.ip_forward = 1` to /etc/sysctl.d/99-sysctl.conf.
 
 
-## Create config files for interface using these keys
+## Create config files
 
 **1) Create the following files on each machine**
 ```bash
@@ -117,14 +138,14 @@ PersistentKeepalive = 25
 **2) `wg-quick up wg0` on both machines and you're done**
 
 # Q/A
-[//]: # ( **Q: I'm confused, I keep hearing the terms clients and servers and peers interchanged but WHO IS WHO ARENT THEY ALL PEERS??** )
+[//]: # ( **Q: I'm confused, I keep hearing the terms clients and servers and peers interchanged but WHO IS WHO? ARENT THEY ALL PEERS??** )
 ### Q: I'm confused, I keep hearing the terms clients and servers and peers interchanged but WHO IS WHO ARENT THEY ALL PEERS??
 - **A:** Yes they are all peers but we can mimic a client-server model using wireguard which is what is shown here :)
 
 ### Q: What would I use this dang thing for anyways
 - **A:** For example, people who want remote access to some computer in their house might have:
 1) A machine with the servers config file on their private (no open ports) home network **(tweaked so this server also has the clients endpoint in its config file)**
-2) And a publicly acessible Amazon EC2 instance with the client configuration.
+2) A publicly acessible Amazon EC2 instance with the client configuration.
 - As long as PersistentKeepalive is set and a connection is established by the "server" to the EC2 "client" (established by ping or any communication then PersistentKeepalive makes the connection stay active) then we can connect to the publicly innaccessable "server" by connecting to the public EC2 "client" :)
 
 ### Q: Where can I find further resources for wireguard or VPN's in general

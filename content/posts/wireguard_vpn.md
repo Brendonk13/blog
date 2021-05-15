@@ -6,9 +6,7 @@ categories:
 tags:
 - wireguard
 - vpn
-- networks
-series:
-- idk
+- networking
 draft: false
 ---
 [//]: # ( {{< series "idk" >}} )

@@ -2,9 +2,8 @@
 # title = "My New Hugo Site"
 # theme = "PaperMod"
 
-baseURL: "http://rm-fr.ca/"
+baseURL: "https://rm-fr.ca/"
 languageCode: "en-us"
-# baseURL: "https://localhost/"
 title: Fun Blog
 paginate: 5
 theme: PaperMod

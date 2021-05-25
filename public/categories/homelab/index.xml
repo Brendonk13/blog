@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 May 2021 16:56:58 -0500</lastBuildDate><atom:link href="https://rm-fr.ca/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 May 2021 21:39:29 -0500</lastBuildDate><atom:link href="https://rm-fr.ca/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VLAN Setup Guide Cisco SG251</title>
+      <link>https://rm-fr.ca/posts/vlans_cisco_sg250/</link>
+      <pubDate>Sun, 23 May 2021 21:39:29 -0500</pubDate>
+      
+      <guid>https://rm-fr.ca/posts/vlans_cisco_sg250/</guid>
+      <description>Some background on VLANs A world without VLANs VLANs can be confusing and seem to be all-powerful, I find it helps to think about why they were needed in the first case: to feasibly scale a network.
+Before VLANs, each ethernet port on a network switch could only belong to one subnet :&#39;( This meant that a corporation would need many switches in order to have a segmented network.
+If this doesn&amp;rsquo;t seem valuable or doesn&amp;rsquo;t make sense yet, read the next section instead of re-reading this one.</description>
+    </item>
+    
     <item>
       <title>Wireguard vpn setup guide</title>
       <link>https://rm-fr.ca/posts/wireguard_vpn/</link>

@@ -2,6 +2,8 @@
 title: "VLAN Setup Guide Cisco SG251"
 date: 2021-05-23T21:39:29-05:00
 draft: false
+categories:
+- homelab
 ---
 
 [//]: # ( todo: create a table of contents )
@@ -68,18 +70,18 @@ This makes the port able to use multiple subnetworks (VLANs).
 This is because access ports may only use the native VLAN, while trunk ports may use any number of configured VLANs.
 - Click: VLAN Management then Interface Settings
 - Click: Edit for each interface the raspberry pi and laptop are connected to.
-![Create trunk port](/static/make_trunk_port.png)
+![Create trunk port](/make_trunk_port.png)
 * * *
 **3. Click: VLAN Management then VLAN Settings then Add**
-![Add VLAN](/static/add_vlan.png)
+![Add VLAN](/add_vlan.png)
 * * *
 **4. Enter VLAN ID and the VLAN name in the popup window.**
-![Add VLAN](/static/adding_vlan_popup.png)
+![Add VLAN](/adding_vlan_popup.png)
 * * *
 **5. Enable IPV4 routing (Layer 3 functionality)**
 - Click: IP Configuration -> IPv4 Management and Interfaces
 - Make sure box is checked like in image below
-![Enable IPV4](/static/enable_ipv4.png)
+![Enable IPV4](/enable_ipv4.png)
 * * *
 **6. Assign default gateway for this VLAN**  
 From same screen as previous step  
@@ -88,7 +90,7 @@ From same screen as previous step
 - Set the IP Address Type to static
 - Define the VLAN subnet and default gateway by entering the IP address of the gateway and the subnet mask.  
 Note that it is convention that VLAN XX be on network aa.bb.XX.0/24 or aa.XX.0.0/16.
-![Create static route](/static/create_static_route.png)
+![Create static route](/create_static_route.png)
 * * *
 
 ## Testing

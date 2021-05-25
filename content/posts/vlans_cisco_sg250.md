@@ -1,7 +1,7 @@
 ---
 title: "VLAN Setup Guide Cisco SG251"
 date: 2021-05-23T21:39:29-05:00
-draft: true
+draft: false
 ---
 
 [//]: # ( todo: create a table of contents )
@@ -21,19 +21,20 @@ draft: true
 
 
 
+# Some background on VLANs
 
-# A world without VLANs
-The traditional explanation of a VLAN requires explaining why they were needed in the first case: to feasibly scale a physical network.  
-Before VLANs, each ethernet port on a network switch could belong to only one subnet, hence the inability to scale.
+## A world without VLANs
+VLANs can be confusing and seem to be all-powerful, I find it helps to think about why they were needed in the first case: **to feasibly scale a network.**  
+Before VLANs, each ethernet port on a network switch could only belong to **one** subnet :'(
 This meant that a corporation would need many switches in order to have a segmented network.  
 If this doesn't seem valuable or doesn't make sense yet, read the next section instead of re-reading this one.
 
-# A better world (has VLANs, which you love)
-VLANs have many benefits but the one that makes them essential is that they allow each port on a switch to handle traffic from many different subnetworks/VLANs (called a VLAN if there are multiple networks on one port).  
-In other words, a machine with one ethernet port can host many VM's on many different networks which all share the same port.
-This was unfeasible in a world without VLANs since this machine would need an ethernet port for every different subnet used by the machine (need many switches also).
+## A better world (has VLANs)
+VLANs have many benefits but the one that makes them essential is that they allow switch ports to handle traffic from many different subnetworks/VLANs (called a VLAN if there are multiple networks on one port).  
+In other words, VLANs allow a machine with one ethernet port to host many VM's on many different networks which all share the same port.  
+This was not feasible without VLANs since this machine would need an ethernet port for every different subnet used by the machine (and many switches!!).  
 
-# Other VLAN benefits
+## Other VLAN benefits
 
 1. Security through network isolation
 2. Easily, feasibly segregate subnets
@@ -49,19 +50,19 @@ This was unfeasible in a world without VLANs since this machine would need an et
 ### Current Network Topology
 - My laptop is connected to my switch which is connected to my router.
 - I also have a raspberry pi connected to this switch.
-- They are currently on the same network and can communicate with each other
+- They are currently on the same network and can communicate with each other.
 - All packets between these two machines are routed via my router.
 
 ### Goal Network Topology
-- Laptop and raspberry pi each receive second IP address on to-be-created subnet: 10.0.30.0/24
+- Laptop and raspberry pi each receive second IP address on to-be-created subnet: 10.0.30.0/24.
 - Traffic on this subnet is routed through layer 3 cisco switch.
-- Traffic does not reach the router
+- Traffic on this subnet does not reach the router.
 
 ## Setup
-1. Access WebUI: https://switch_ip_address  
+1. **Access WebUI: https://switch_ip_address**  
 **Note:** I found https to be significantly slower than http!
 * * *
-2. Set laptop and raspberry pi ports on switch to trunk mode from access mode  
+**2. Set laptop and raspberry pi ports on switch to trunk mode from access mode**  
 \
 This makes the port able to use multiple subnetworks (VLANs).
 This is because access ports may only use the native VLAN, while trunk ports may use any number of configured VLANs.
@@ -69,21 +70,21 @@ This is because access ports may only use the native VLAN, while trunk ports may
 - Click: Edit for each interface the raspberry pi and laptop are connected to.
 ![Create trunk port](/static/make_trunk_port.png)
 * * *
-3. Click: VLAN Management then VLAN Settings then Add
+**3. Click: VLAN Management then VLAN Settings then Add**
 ![Add VLAN](/static/add_vlan.png)
 * * *
-4. Enter VLAN ID and the VLAN name in the popup window.
+**4. Enter VLAN ID and the VLAN name in the popup window.**
 ![Add VLAN](/static/adding_vlan_popup.png)
 * * *
-5. Enable IPV4 routing (Layer 3 functionality)
+**5. Enable IPV4 routing (Layer 3 functionality)**
 - Click: IP Configuration -> IPv4 Management and Interfaces
 - Make sure box is checked like in image below
 ![Enable IPV4](/static/enable_ipv4.png)
 * * *
-6. Assign default gateway for this VLAN  
+**6. Assign default gateway for this VLAN**  
 From same screen as previous step  
 - Click: Add
-- set the interface to VLAN 30
+- Set the interface to VLAN 30
 - Set the IP Address Type to static
 - Define the VLAN subnet and default gateway by entering the IP address of the gateway and the subnet mask.  
 Note that it is convention that VLAN XX be on network aa.bb.XX.0/24 or aa.XX.0.0/16.
@@ -115,8 +116,8 @@ ping -I eth0.30 10.0.30.20
 ```
 
 # Q/A
-### Why this model? Aren't there plenty of cisco VLAN guides already?
-Yes there are, but the SG 250 doesn't use the same command line interface as most cisco switches, which renders those guides not so helpful.  
+### Aren't there plenty of cisco VLAN guides already?
+Yes there are (strangely less than expected), but the SG 250 doesn't use the same command line interface as most cisco switches, which renders those guides not so helpful.  
 I believe that most cisco switches have the same webUI however so this guide may work for other cisco switches.
 
 [//]: # ( The reason I made this guide is because the SG 250 doesn't use the same command line interface as most cisco switches, which renders guides for those switches less helpful. )

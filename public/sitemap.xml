@@ -2,37 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://rm-fr.ca/categories/</loc>
+    <loc>https://rm-fr.ca/</loc>
+    <lastmod>2021-05-23T21:39:29-05:00</lastmod>
+  </url><url>
+    <loc>https://rm-fr.ca/posts/</loc>
+    <lastmod>2021-05-23T21:39:29-05:00</lastmod>
+  </url><url>
+    <loc>https://rm-fr.ca/posts/vlans_cisco_sg250/</loc>
+    <lastmod>2021-05-23T21:39:29-05:00</lastmod>
+  </url><url>
+    <loc>https://rm-fr.ca/categories/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/</loc>
+    <loc>https://rm-fr.ca/categories/homelab/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/categories/homelab/</loc>
+    <loc>https://rm-fr.ca/tags/networking/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/tags/networking/</loc>
+    <loc>https://rm-fr.ca/tags/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/posts/</loc>
+    <loc>https://rm-fr.ca/tags/vpn/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/tags/</loc>
+    <loc>https://rm-fr.ca/tags/wireguard/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/tags/vpn/</loc>
+    <loc>https://rm-fr.ca/posts/wireguard_vpn/</loc>
     <lastmod>2021-05-05T16:56:58-05:00</lastmod>
   </url><url>
-    <loc>http://rm-fr.ca/tags/wireguard/</loc>
-    <lastmod>2021-05-05T16:56:58-05:00</lastmod>
+    <loc>https://rm-fr.ca/archives/</loc>
   </url><url>
-    <loc>http://rm-fr.ca/posts/wireguard_vpn/</loc>
-    <lastmod>2021-05-05T16:56:58-05:00</lastmod>
+    <loc>https://rm-fr.ca/search/</loc>
   </url><url>
-    <loc>http://rm-fr.ca/archives/</loc>
-  </url><url>
-    <loc>http://rm-fr.ca/search/</loc>
-  </url><url>
-    <loc>http://rm-fr.ca/series/</loc>
+    <loc>https://rm-fr.ca/series/</loc>
   </url>
 </urlset>

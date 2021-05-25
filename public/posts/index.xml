@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Fun Blog</title>
-    <link>http://rm-fr.ca/posts/</link>
+    <link>https://rm-fr.ca/posts/</link>
     <description>Recent content in Posts on Fun Blog</description>
     <image>
-      <url>http://rm-fr.ca/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://rm-fr.ca/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://rm-fr.ca/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://rm-fr.ca/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 May 2021 16:56:58 -0500</lastBuildDate><atom:link href="http://rm-fr.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 May 2021 21:39:29 -0500</lastBuildDate><atom:link href="https://rm-fr.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VLAN Setup Guide Cisco SG251</title>
+      <link>https://rm-fr.ca/posts/vlans_cisco_sg250/</link>
+      <pubDate>Sun, 23 May 2021 21:39:29 -0500</pubDate>
+      
+      <guid>https://rm-fr.ca/posts/vlans_cisco_sg250/</guid>
+      <description>Some background on VLANs A world without VLANs VLANs can be confusing and seem to be all-powerful, I find it helps to think about why they were needed in the first case: to feasibly scale a network.
+Before VLANs, each ethernet port on a network switch could only belong to one subnet :&#39;( This meant that a corporation would need many switches in order to have a segmented network.
+If this doesn&amp;rsquo;t seem valuable or doesn&amp;rsquo;t make sense yet, read the next section instead of re-reading this one.</description>
+    </item>
+    
     <item>
       <title>Wireguard vpn setup guide</title>
-      <link>http://rm-fr.ca/posts/wireguard_vpn/</link>
+      <link>https://rm-fr.ca/posts/wireguard_vpn/</link>
       <pubDate>Wed, 05 May 2021 16:56:58 -0500</pubDate>
       
-      <guid>http://rm-fr.ca/posts/wireguard_vpn/</guid>
+      <guid>https://rm-fr.ca/posts/wireguard_vpn/</guid>
       <description>Background Info VPN&amp;rsquo;s in my words The purpose of a VPN server at its heart is to give remote clients a private ip address on some private IP subnet that they cannot access.
 Basically the VPN server can access some subnetworks that you can&amp;rsquo;t access but want to access.
 To do this the VPN gives you an IP address on your desired subnet which effectively makes you a client on that network with access to most or all (depending on firewall/ACL rules of the default gateway for the subnet) machines on that network.</description>

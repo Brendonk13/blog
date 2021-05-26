@@ -1,5 +1,5 @@
 ---
-title: "VLAN Setup Guide Cisco SG251"
+title: "VLAN Setup Guide Cisco SG250"
 date: 2021-05-23T21:39:29-05:00
 draft: false
 categories:

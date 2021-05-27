@@ -127,7 +127,7 @@ I believe that most cisco switches have the same webUI however so this guide may
 ### Why can't my devices connect to the internet via the VLAN interface?  
 Because your router does not know where to send the return traffic for the subnetwork: 10.0.30.0/24.  
 **Solution:** Add a static route on your router where all traffic destined for the subnet 10.0.30.0/24 is sent to the the switches IP address on the ***same subnetwork as the router.***  
-**For example,** my router IP is 192.168.0.1 and my static route sends all traffic destined for 10.0.50.0/24 (have other VLAN I allow to access internet) to 192.168.0.99
+**For example:** My router IP is 192.168.0.1 and my static route sends all traffic destined for 10.0.50.0/24 (have other VLAN I allow to access internet) to 192.168.0.99.
 
 [//]: # ( So unless your router is also on the subnet: 10.0.30.0/24, please don't create a static route to the switch's VLAN gateway IP: 10.0.30.99 )
 

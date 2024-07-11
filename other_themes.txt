@@ -1,0 +1,4 @@
+
+even
+https://jdhao.github.io/2021/12/01/nvim_v06_released/
+- I like that it shows the content outline of the article on the side

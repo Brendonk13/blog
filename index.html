@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brendon Keirle</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #d7d7d7;
+      font-family: 'Roboto Mono', monospace;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #1abc9c;
+      text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      color: #3498db;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+    main {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      font-size: 2rem;
+      color: #3498db;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      margin-bottom: 15px;
+    }
+    p {
+      color: #ccc;
+      font-size: 1.25rem;
+    }
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+    .cropped-image {
+      /* width: 200px; /1* Set desired width *1/ */
+      /* height: 200px; /1* Set desired height *1/ */
+      clip-path: polygon(0 0, 100% 0, 100% 89%, 0 89%);
+    }
+    .about-link {
+      /* background-color: #1c1e10; */
+      color: #1abc9c;
+    }
+    .about-link:hover,
+    .about-link.active {
+      background-color: #24394e;
+      color: #1abc9c;
+    }
+    .technical-link {
+      /* background-color: #1c1e10; */
+      color: #3498db;
+    }
+    .technical-link:hover,
+    .technical-link.active {
+      background-color: #24394e;
+      color: #3498db;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="mt-12 mb-16">
+    <h1 class="text-5xl">Brendon Keirle</h1>
+    <p class="subtitle">Full Stack Developer</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg p-8 mb-12">
+    <!-- Navigation Links -->
+    <nav class="flex justify-center mb-8">
+      <a href="#about-section" id="about-link" class="about-link mr-4">About</a>
+      <a href="#technical-section" id="technical-link" class="technical-link">Projects</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about-section" class="">
+      <!-- <h2 class="text-3xl mb-4">About</h2> -->
+      <div class="flex items-center justify-center mb-4">
+        <img src="/home/brendon/dev/dev/my_projects/blog/images/portfolio_website_picture_of_me.png" alt="Headshot" class="rounded-full h-32 w-32 object-cover">
+      </div>
+      <p class="text-lg mb-8">Welcome to my lair.</p>
+      <!-- <button id="show-technical" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300">View Technical Info</button> -->
+      <h2 class="text-3xl">Connect</h2>
+      <ul>
+        <li><a href="https://github.com/Brendonk13" target="_blank" rel="noopener noreferrer" class="text-lg text-purple-400 hover:underline">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/brendon-j-keirle" target="_blank" rel="noopener noreferrer" class="text-lg text-blue-400 hover:underline">LinkedIn</a></li>
+        <!-- Add more social media links as needed -->
+      </ul>
+    </section>
+
+    <!-- Technical Info Section -->
+    <section id="technical-section" class="hidden">
+      <!-- <h2 class="text-3xl mb-4">Technical Info</h2> -->
+
+      <!-- Projects -->
+      <h3 class="text-2xl mb-4">Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="project-card">
+          <img src="/home/brendon/dev/dev/my_projects/blog/images/py-demystify.png" alt="py-demystify" class="object-cover w-full h-48 rounded-lg mb-4">
+          <h3 class="text-xl">Py Demystify (Debugger/Tracer)</h3>
+          <p class="text-base">Demystify your program's execution by showing you the execution events that matter such as: variable changes, unclear assignments. No dependencies necessary.</p>
+          <a href="https://github.com/Brendonk13/py-demystify" target="_blank" rel="noopener noreferrer" class="block mt-4 text-lg text-purple-400 hover:underline">GitHub</a>
+        </div>
+        <div class="project-card">
+          <!-- <a href="https://github.com/Brendonk13/stuff_manager_api" target="_blank" rel="noopener noreferrer" class="hover:underline"> -->
+          <img src="/home/brendon/dev/dev/my_projects/blog/images/stuff_manager.png" alt="Stuff Manager" class="object-cover w-full h-48 rounded-lg mb-4">
+          <h3 class="text-xl">Stuff Manager</h3>
+          <p class="text-base">Personal organizational website inspired by the book Getting Things Done.</p>
+          <a href="https://github.com/Brendonk13/stuff_manager_api" target="_blank" rel="noopener noreferrer" class="block mt-4 text-lg text-purple-400 hover:underline">GitHub</a>
+          <!-- </a> -->
+        </div>
+        <div class="project-card">
+          <img src="/home/brendon/dev/dev/my_projects/blog/images/compiler.png" alt="Go Compiler" class="object-cover w-full h-48 rounded-lg mb-4">
+          <h3 class="text-xl">Go Compiler</h3>
+          <p class="text-base">Transpile a significant subset of Go into Java using Ocaml</p>
+          <a href="https://github.com/Brendonk13/go_compiler" target="_blank" rel="noopener noreferrer" class="block mt-4 text-lg text-purple-400 hover:underline">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="/home/brendon/dev/dev/my_projects/blog/images/homelab.png" alt="Homelab" class="object-cover w-full h-48 rounded-lg mb-4">
+          <h3 class="text-xl">HomeLab</h3>
+          <p class="text-base">V-LAN segregated network of virtual machines which self hosts all my personal services such as password manager, photos, and backups.</p>
+        </div>
+        <div class="project-card">
+          <img src="/home/brendon/dev/dev/my_projects/blog/images/sentiment_analysis.png" alt="Sentiment Analysis" class="object-cover w-full h-48 rounded-lg mb-4">
+          <h3 class="text-xl">AI Reddit Sentiment Analysis</h3>
+          <p class="text-base">Use machine learning to compute sentiment analysis of reddit data</p>
+          <a href="https://github.com/Brendonk13/551Proj1" target="_blank" rel="noopener noreferrer" class="block mt-4 text-lg text-purple-400 hover:underline">GitHub</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+
+      <!-- Back to About Button -->
+      <!-- <button id="show-about" class="mt-8 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300">Back to About </button> -->
+    </section>
+  </main>
+
+  <!-- <footer class="text-center text-gray-600"> -->
+  <!--   <p>&copy; 2024 My Nerdy Portfolio. All rights reserved.</p> -->
+  <!-- </footer> -->
+
+  <!-- JavaScript for toggling sections and active links -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // const showTechnicalButton = document.getElementById('show-technical');
+      // const showAboutButton = document.getElementById('show-about');
+      const aboutSection = document.getElementById('about-section');
+      const technicalSection = document.getElementById('technical-section');
+      const aboutLink = document.getElementById('about-link');
+      const technicalLink = document.getElementById('technical-link');
+
+      // Function to toggle visibility of sections
+      function showAboutSection() {
+        aboutSection.classList.remove('hidden');
+        technicalSection.classList.add('hidden');
+        aboutLink.classList.add('active');
+        technicalLink.classList.remove('active');
+      }
+
+      function showTechnicalSection() {
+        technicalSection.classList.remove('hidden');
+        aboutSection.classList.add('hidden');
+        technicalLink.classList.add('active');
+        aboutLink.classList.remove('active');
+      }
+
+      // Event listeners for navigation links
+      aboutLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showAboutSection();
+      });
+
+      technicalLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showTechnicalSection();
+      });
+
+      // Initial state
+      showAboutSection(); // Show About Me section by default
+
+      // Button click events for toggling sections
+      // showTechnicalButton.addEventListener('click', function() {
+      //   showTechnicalSection();
+      // });
+
+      // showAboutButton.addEventListener('click', function() {
+      //   showAboutSection();
+      // });
+
+    });
+  </script>
+</body>
+</html>
+
